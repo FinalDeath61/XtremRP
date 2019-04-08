@@ -6,8 +6,8 @@ import java.io.File;
 public class XtremClient extends XtremCommon {
 	
 	@Override
-	public void preinit(File configFile) {
-		super.preinit(configFile);
+	public void preInit(File configFile) {
+		super.preInit(configFile);
 		// ici on enregistre les textures
 	}
 

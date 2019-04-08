@@ -5,6 +5,8 @@ import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.inventory.Container;
 
+import java.awt.*;
+
 public class GuiMarchandPnj  extends GuiScreen	{
 
 	@Override

@@ -26,14 +26,14 @@ public class XtremModForge {
 	
 	public static Logger log;
 	/**
-	 * Au chargement du mod, check de toutes les méthodes annotées eventhandler. Execution en fonction de l'étape correspondant a la 
-	 * classe FML appelée.
+	 * Au chargement du mod, check de toutes les mï¿½thodes annotï¿½es eventhandler. Execution en fonction de l'ï¿½tape correspondant a la 
+	 * classe FML appelï¿½e.
 	 * @param event
 	 */
 	@EventHandler
 	public void preinit(FMLPreInitializationEvent event) {
 		log = event.getModLog();
-		proxy.preinit(event.getSuggestedConfigurationFile());
+		proxy.preInit(event.getSuggestedConfigurationFile());
 	}
 	
 	@EventHandler
