@@ -19,6 +19,7 @@ public class XtremCommon {
 
 	public void preInit(File configFile) {
 		RegistryHandler.preInitRegistries();
+        ModCapabilities.registerCapabilities();
 	}
 
 	public void init() {
