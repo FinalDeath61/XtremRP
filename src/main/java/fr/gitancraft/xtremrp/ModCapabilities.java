@@ -1,15 +1,18 @@
 package fr.gitancraft.xtremrp;
 
-import fr.gitancraft.xtremrp.capabilities.IProcess;
+import fr.gitancraft.xtremrp.entity.capabilities.IQuestList;
+import fr.gitancraft.xtremrp.entity.capabilities.PlayerQuestCapabilities;
+import fr.gitancraft.xtremrp.entity.capabilities.QuestListImpl;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.CapabilityInject;
+import net.minecraftforge.common.capabilities.CapabilityManager;
 
 public class ModCapabilities {
 
-//    @CapabilityInject(IProcess.class)
-//    private static final Capability<IProcess> CAPABILITY_PROCESS = null;
+    @CapabilityInject(IQuestList.class)
+    public static final Capability<IQuestList> CAPABILITY_QUESTLIST = null;
 
     public static void registerCapabilities() {
-//        CapabilityManager.INSTANCE.register(IProcess.class, new CapabilityProcess(), Process.class::newInstance);
+        CapabilityManager.INSTANCE.register(IQuestList.class, new PlayerQuestCapabilities(), QuestListImpl.class::newInstance);
     }
 }

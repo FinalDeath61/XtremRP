@@ -24,4 +24,5 @@ public class renderQuestNOS extends RenderLiving<QuestNpc> {
 	protected void applyRotations(QuestNpc entityLiving, float p_77043_2_, float rotationYaw, float partialTicks) {
 		super.applyRotations(entityLiving, p_77043_2_, rotationYaw, partialTicks);
 	}
+
 }

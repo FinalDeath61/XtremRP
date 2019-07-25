@@ -5,7 +5,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+import fr.gitancraft.xtremrp.XtremModForge;
 import fr.gitancraft.xtremrp.Pnj.gui.GuiMarchandPnj;
+import fr.gitancraft.xtremrp.gui.GuiPNJMaster;
+import fr.gitancraft.xtremrp.gui.pnj.GuiBasicDialog;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.passive.EntityVillager;
@@ -29,6 +32,23 @@ public class QuestNpc extends EntityVillager {
 		super(worldIn);
 	}
 
+	
+	@Override
+	protected boolean isMovementBlocked() {
+		// TODO Auto-generated method stub
+		return true;
+	}
+	@Override
+	protected boolean canDespawn() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	
+	@Override
+	public boolean attackable() {
+		// TODO Auto-generated method stub
+		return false;
+	}
 	@Override
 	public EntityVillager createChild(EntityAgeable ageable) {
 		return new EntityVillager(world);
@@ -60,10 +80,11 @@ public class QuestNpc extends EntityVillager {
 		this.tokenID = tokenID;
 	}
 	
+	
+	
 	@Override
 	public boolean processInteract(EntityPlayer player, EnumHand hand) {
-		
-		Minecraft.getMinecraft().displayGuiScreen(new GuiMarchandPnj());
+		player.openGui(XtremModForge.instance, 2, world, player.getPosition().getX(), player.getPosition().getY(), player.getPosition().getZ());
 		return true;
 	}
 	

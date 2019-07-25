@@ -2,8 +2,10 @@ package fr.gitancraft.xtremrp.proxy;
 
 import fr.gitancraft.xtremrp.blocks.container.ForgeContainer;
 import fr.gitancraft.xtremrp.blocks.gui.GuiForge;
+import fr.gitancraft.xtremrp.gui.pnj.GuiBasicDialog;
 import fr.gitancraft.xtremrp.tileentities.TestMultiBlockTileEntity;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.Container;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -28,6 +30,9 @@ public class XtremGui implements IGuiHandler {
         if (te instanceof TestMultiBlockTileEntity) {
             TestMultiBlockTileEntity containerTileEntity = (TestMultiBlockTileEntity) te;
             return new GuiForge(containerTileEntity, new ForgeContainer(player.inventory, containerTileEntity));
+        }
+        if(ID == 2 ) {
+        	return new GuiBasicDialog(player);
         }
         return null;
     }
