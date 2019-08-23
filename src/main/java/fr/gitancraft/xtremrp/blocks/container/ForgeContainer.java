@@ -1,11 +1,13 @@
 package fr.gitancraft.xtremrp.blocks.container;
 
+import fr.gitancraft.xtremrp.knowledges.AKnowledge;
 import fr.gitancraft.xtremrp.tileentities.TestMultiBlockTileEntity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
@@ -30,7 +32,7 @@ public class ForgeContainer extends Container {
             for (int col = 0; col < 9; ++col) {
                 int x = 8 + col * 18;
                 int y = row * 18 + 110;
-                this.addSlotToContainer(new Slot(playerInventory, col + row * 9 + 10, x, y));
+                this.addSlotToContainer(new Slot(playerInventory, col + row * 9 + 9, x, y));
             }
         }
 

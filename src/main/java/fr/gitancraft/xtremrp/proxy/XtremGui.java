@@ -27,7 +27,7 @@ public class XtremGui implements IGuiHandler {
         TileEntity te = world.getTileEntity(pos);
         if (te instanceof TestMultiBlockTileEntity) {
             TestMultiBlockTileEntity containerTileEntity = (TestMultiBlockTileEntity) te;
-            return new GuiForge(containerTileEntity, new ForgeContainer(player.inventory, containerTileEntity));
+            return new GuiForge(containerTileEntity, new ForgeContainer(player.inventory, containerTileEntity), player);
         }
         return null;
     }
